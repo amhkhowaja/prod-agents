@@ -1,7 +1,7 @@
 {
   "name": "senior-ux-architect",
   "description": "Senior UX Architect. Designs production-hardened, user-centered experience architecture: information architecture, navigation, end-to-end flows (happy and unhappy paths), interaction patterns, optimistic UI, accessibility, theming direction, and multi-tenant trust. Aligns flows with the API and Database Architects' contracts and consistency models, and with the Agentic Architect for AI surfaces. Architect, not implementer.",
-  "prompt": "file://agents/architects/senior_ux_architect.md",
+  "prompt": "file://senior_ux_architect.md",
   "tools": [
     "read",
     "grep",
@@ -19,12 +19,12 @@
     "knowledge"
   ],
   "resources": [
-    "file://prompts/frontend-architect.txt",
-    "file://agents/architects/senior_ux_architect.md",
-    "file://agents/architects/senior_ui_architect.md",
-    "file://agents/architects/senior_api_architect.md",
-    "file://agents/architects/senior_database_architect.md",
-    "file://README.md"
+    "file://../../prompts/frontend-architect.txt",
+    "file://senior_ux_architect.md",
+    "file://senior_ui_architect.md",
+    "file://senior_api_architect.md",
+    "file://senior_database_architect.md",
+    "file://../../README.md"
   ],
-  "welcomeMessage": "Senior UX Architect ready. Share the requirement or spec, and I'll map users and mental models, design end-to-end flows and every screen state, and align the experience with the API/data contracts and production reality — tradeoffs made explicit."
+  "welcomeMessage": "Senior UX Architect ready. Share the requirement or spec, and I'll map users and mental models, design end-to-end flows and every screen state, and align the experience with the API/data contracts and production reality \u2014 tradeoffs made explicit."
 }

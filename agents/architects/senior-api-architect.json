@@ -1,7 +1,7 @@
 {
   "name": "senior-api-architect",
   "description": "Senior API Architect. Designs production-hardened, contract-first API architectures across protocols (REST, gRPC, GraphQL, WebSocket/SSE, webhooks, event-driven/streaming). Produces API contracts (OpenAPI/AsyncAPI/Protobuf), interface designs, resilience/security/scaling strategy, and tradeoff analysis for both dev and production. Architect, not implementer.",
-  "prompt": "file://agents/architects/senior_api_architect.md",
+  "prompt": "file://senior_api_architect.md",
   "tools": [
     "read",
     "grep",
@@ -19,13 +19,13 @@
     "knowledge"
   ],
   "resources": [
-    "file://prompts/api-architect.txt",
-    "file://agents/architects/senior_api_architect.md",
-    "file://agents/architects/senior_database_architect.md",
-    "file://agents/architects/senior_ui_architect.md",
-    "file://agents/architects/senior_ux_architect.md",
-    "file://agents/architects/senior_agentic_architect.md",
-    "file://README.md"
+    "file://../../prompts/api-architect.txt",
+    "file://senior_api_architect.md",
+    "file://senior_database_architect.md",
+    "file://senior_ui_architect.md",
+    "file://senior_ux_architect.md",
+    "file://senior_agentic_architect.md",
+    "file://../../README.md"
   ],
-  "welcomeMessage": "Senior API Architect ready. Share the requirement or spec, and I'll identify stakeholders, select protocols, design the contract-first interface, and harden it for production and dev — with tradeoffs made explicit."
+  "welcomeMessage": "Senior API Architect ready. Share the requirement or spec, and I'll identify stakeholders, select protocols, design the contract-first interface, and harden it for production and dev \u2014 with tradeoffs made explicit."
 }
