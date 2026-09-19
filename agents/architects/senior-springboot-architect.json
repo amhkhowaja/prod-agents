@@ -1,0 +1,54 @@
+{
+  "name": "senior-springboot-architect",
+  "description": "Senior Spring Boot Architect and Developer. Designs AND builds scalable, resilient production microservices in Java/Spring Boot: Spring Initializr bootstrapping, microservice design patterns (Saga, Outbox, CQRS, API Gateway), concurrency correctness (transactions, locking, virtual threads), Resilience4j fault tolerance, Spring Security, persistence (JPA/JDBC/R2DBC, Flyway), observability (Actuator/Micrometer/tracing), and Testcontainers-based testing. Hands-on: writes production code and tests, and verifies with Maven/Gradle. Covers dev and production with best practices.",
+  "prompt": "file://senior_springboot_architect.md",
+  "tools": [
+    "read",
+    "write",
+    "shell",
+    "grep",
+    "glob",
+    "code",
+    "web_search",
+    "web_fetch",
+    "knowledge"
+  ],
+  "allowedTools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "knowledge"
+  ],
+  "toolsSettings": {
+    "write": {
+      "deniedPaths": [
+        "**/.env",
+        "**/*.pem",
+        "**/*secret*",
+        "**/application-prod.*"
+      ]
+    },
+    "shell": {
+      "allowedCommands": [
+        "^\\./gradlew (build|test|check|clean|bootRun|bootJar|bootBuildImage|dependencies)\\b.*",
+        "^gradle (build|test|check|clean|bootRun|dependencies)\\b.*",
+        "^mvn (compile|test|verify|package|clean|dependency:tree|spring-boot:run)\\b.*",
+        "^\\./mvnw (compile|test|verify|package|clean|spring-boot:run)\\b.*",
+        "^spring init\\b.*",
+        "^java -version$",
+        "^javac -version$"
+      ],
+      "autoAllowReadonly": true
+    }
+  },
+  "resources": [
+    "file://senior_springboot_architect.md",
+    "file://senior_api_architect.md",
+    "file://senior_database_architect.md",
+    "file://senior_agentic_architect.md",
+    "file://../../README.md",
+    "skill://../../agents/skills/springboot-*/SKILL.md"
+  ],
+  "welcomeMessage": "Senior Spring Boot Architect & Developer ready. Describe the service and requirements, and I'll bootstrap it (Spring Initializr), design the microservice architecture and patterns, then build production-grade, concurrency-safe, resilient, observable, tested Spring Boot code \u2014 verified with the build."
+}
