@@ -1,0 +1,27 @@
+{
+  "name": "senior-database-architect",
+  "description": "Senior Database Architect. Designs production-hardened, spec-driven data architectures across polyglot stores (SQL, NoSQL, vector, graph, time-series, streaming, search, object). Produces architecture decision documents, data models, and tradeoff analysis for both dev and production. Architect, not implementer.",
+  "prompt": "file://agents/architects/senior_database_architect.md",
+  "tools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "web_search",
+    "web_fetch",
+    "knowledge"
+  ],
+  "allowedTools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "knowledge"
+  ],
+  "resources": [
+    "file://prompts/database_architect.txt",
+    "file://agents/architects/senior_database_architect.md",
+    "file://README.md"
+  ],
+  "welcomeMessage": "Senior Database Architect ready. Share the requirement or spec, and I'll classify the workload, select the right store(s), model the data, and design for production and dev — with tradeoffs made explicit."
+}
