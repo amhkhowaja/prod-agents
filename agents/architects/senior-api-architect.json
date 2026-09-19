@@ -1,0 +1,27 @@
+{
+  "name": "senior-api-architect",
+  "description": "Senior API Architect. Designs production-hardened, contract-first API architectures across protocols (REST, gRPC, GraphQL, WebSocket/SSE, webhooks, event-driven/streaming). Produces API contracts (OpenAPI/AsyncAPI/Protobuf), interface designs, resilience/security/scaling strategy, and tradeoff analysis for both dev and production. Architect, not implementer.",
+  "prompt": "file://agents/architects/senior_api_architect.md",
+  "tools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "web_search",
+    "web_fetch",
+    "knowledge"
+  ],
+  "allowedTools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "knowledge"
+  ],
+  "resources": [
+    "file://prompts/api-architect.txt",
+    "file://agents/architects/senior_api_architect.md",
+    "file://README.md"
+  ],
+  "welcomeMessage": "Senior API Architect ready. Share the requirement or spec, and I'll identify stakeholders, select protocols, design the contract-first interface, and harden it for production and dev — with tradeoffs made explicit."
+}
