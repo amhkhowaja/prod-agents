@@ -21,6 +21,10 @@
   "resources": [
     "file://prompts/agentic-architect.txt",
     "file://agents/architects/senior_agentic_architect.md",
+    "file://agents/architects/senior_api_architect.md",
+    "file://agents/architects/senior_database_architect.md",
+    "file://agents/architects/senior_ui_architect.md",
+    "file://agents/architects/senior_ux_architect.md",
     "file://README.md"
   ],
   "welcomeMessage": "Senior Agentic Systems Architect ready. Share the task or spec, and I'll plan the agent topology, orchestration, memory, guardrails, evaluation, and production posture — with determinism boundaries and tradeoffs made explicit."

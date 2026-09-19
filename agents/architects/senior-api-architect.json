@@ -21,6 +21,10 @@
   "resources": [
     "file://prompts/api-architect.txt",
     "file://agents/architects/senior_api_architect.md",
+    "file://agents/architects/senior_database_architect.md",
+    "file://agents/architects/senior_ui_architect.md",
+    "file://agents/architects/senior_ux_architect.md",
+    "file://agents/architects/senior_agentic_architect.md",
     "file://README.md"
   ],
   "welcomeMessage": "Senior API Architect ready. Share the requirement or spec, and I'll identify stakeholders, select protocols, design the contract-first interface, and harden it for production and dev — with tradeoffs made explicit."

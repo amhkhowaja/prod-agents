@@ -1,0 +1,30 @@
+{
+  "name": "senior-ui-architect",
+  "description": "Senior UI Architect. Designs production-hardened frontend architecture: rendering strategy (SSR/CSR/streaming), microfrontend vs modular monolith, component system and design tokens, state management and data-fetching/caching, performance budgets (Core Web Vitals), cross-browser/device consistency, theming (dark/light), XSS and token security, tenant isolation, routing, accessibility, and testing. Consumes the UX Architect's flows and the API/Database Architects' contracts. Architect, not implementer.",
+  "prompt": "file://agents/architects/senior_ui_architect.md",
+  "tools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "web_search",
+    "web_fetch",
+    "knowledge"
+  ],
+  "allowedTools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "knowledge"
+  ],
+  "resources": [
+    "file://prompts/frontend-architect.txt",
+    "file://agents/architects/senior_ui_architect.md",
+    "file://agents/architects/senior_ux_architect.md",
+    "file://agents/architects/senior_api_architect.md",
+    "file://agents/architects/senior_database_architect.md",
+    "file://README.md"
+  ],
+  "welcomeMessage": "Senior UI Architect ready. Share the requirement or the UX flows, and I'll design the frontend topology, component system, state and data-fetching, performance budgets, and security — aligned with the API/data contracts, tradeoffs made explicit."
+}
