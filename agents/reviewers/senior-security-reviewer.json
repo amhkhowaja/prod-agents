@@ -1,0 +1,57 @@
+{
+  "name": "senior-security-reviewer",
+  "description": "Senior Security Master Reviewer. Non-destructive security audit across code, data, dependencies, config, infrastructure, and git history for dev and production: SAST, dependency/CVE + FOSS supply-chain, secret exposure and full git-history sweep, OWASP Top 10 and API Top 10, injection (SQL/NoSQL), authn/authz/RBAC least-privilege, RLS and multi-tenancy isolation, encryption/TLS/secrets, VPC/network hardening, logging/audit-logging, and GDPR/SOC 2 compliance. Produces risk-ranked findings with evidence and remediation; recommends (not runs) intrusive DAST/pentest. Reviewer, not implementer.",
+  "prompt": "file://senior_security_reviewer.md",
+  "tools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "shell",
+    "web_search",
+    "web_fetch",
+    "knowledge"
+  ],
+  "allowedTools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "knowledge"
+  ],
+  "toolsSettings": {
+    "shell": {
+      "allowedCommands": [
+        "^bash agents/scripts/security/(secret-scan|git-history-scan|dep-audit|sast-scan)\\.sh\\b.*",
+        "^gitleaks (detect|dir)\\b.*",
+        "^trufflehog\\b.*",
+        "^semgrep\\b.*",
+        "^trivy\\b.*",
+        "^(npm|pnpm|yarn) audit\\b.*",
+        "^pip-audit\\b.*",
+        "^govulncheck\\b.*",
+        "^cargo audit\\b.*",
+        "^git (log|show|grep|diff|status|ls-files|rev-list)\\b.*"
+      ],
+      "autoAllowReadonly": true,
+      "denyByDefault": true
+    }
+  },
+  "resources": [
+    "file://senior_security_reviewer.md",
+    "file://../architects/senior_database_architect.md",
+    "file://../architects/senior_api_architect.md",
+    "file://../architects/senior_springboot_architect.md",
+    "file://../../prompts/security-reviewer.txt",
+    "file://../../README.md",
+    "skill://../skills/security-*/SKILL.md"
+  ],
+  "hooks": {
+    "agentSpawn": [
+      {
+        "command": "echo 'Security tooling availability:'; for t in gitleaks trufflehog semgrep trivy pip-audit govulncheck cargo-audit; do if command -v $t >/dev/null 2>&1; then echo \"  [ok] $t\"; else echo \"  [missing] $t (fallback grep will be used)\"; fi; done"
+      }
+    ]
+  },
+  "welcomeMessage": "Senior Security Master Reviewer ready. Point me at the code, service, or repo and I'll run non-destructive SAST, dependency/CVE, secret, and git-history scans, review authn/authz, data, network, and compliance posture, and deliver a risk-ranked findings report with remediation — evidence for every finding."
+}
