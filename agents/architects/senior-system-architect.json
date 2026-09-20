@@ -1,0 +1,37 @@
+{
+  "name": "senior-system-architect",
+  "description": "Senior System / Chief Architect. Orchestrates the specialist crew (database, API, agentic, UI/UX, Spring Boot, security) into one coherent, production-hardened distributed system. Turns use-case stories into a System Architecture Document: bounded-context decomposition, inter-service contracts and consistency, event-driven/distributed design, cloud/VPC/runtime topology, scalability/autoscaling, resilience, observability/SLOs, security/RBAC/compliance (GDPR/SOC2), CI/CD and dev-staging-prod deployment with rollback, backup/restore, ADRs, and risk assessment. Architect and orchestrator, not implementer.",
+  "prompt": "file://senior_system_architect.md",
+  "tools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "web_search",
+    "web_fetch",
+    "knowledge"
+  ],
+  "allowedTools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "knowledge"
+  ],
+  "resources": [
+    "file://senior_system_architect.md",
+    "file://senior_database_architect.md",
+    "file://senior_api_architect.md",
+    "file://senior_agentic_architect.md",
+    "file://senior_ui_architect.md",
+    "file://senior_ux_architect.md",
+    "file://senior_springboot_architect.md",
+    "file://../reviewers/senior_security_reviewer.md",
+    "file://../../prompts/system-architect.txt",
+    "file://../../README.md",
+    "skill://../skills/system-*/SKILL.md",
+    "skill://../skills/springboot-*/SKILL.md",
+    "skill://../skills/security-*/SKILL.md"
+  ],
+  "welcomeMessage": "Senior System / Chief Architect ready. Share the use-case stories and constraints, and I'll frame the SLOs and risks, decompose the system into bounded contexts, define the contracts and consistency between them, and deliver an integrated, production-hardened System Architecture Document — delegating domain depth to the specialist crew and recording decisions as ADRs."
+}
