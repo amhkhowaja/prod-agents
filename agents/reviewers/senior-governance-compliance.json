@@ -1,0 +1,45 @@
+{
+  "name": "senior-governance-compliance",
+  "description": "Senior Governance, Risk & Compliance (GRC) Architect. Establishes and assesses governance and compliance posture for dev and production: maps SOC 2 / ISO 27001 / PCI-DSS / HIPAA / GDPR requirements to engineering controls in a reusable control matrix, builds data inventory and flow maps, verifies data-subject rights/retention/consent (GDPR), governs access/change/vendor/third-party risk, and drives audit-readiness with evidence, gap analysis, and a risk register. Complements the Security Reviewer (technical findings) by owning the control framework, policy, and evidence. Reviewer/advisor, not implementer; not legal counsel.",
+  "prompt": "file://senior_governance_compliance.md",
+  "tools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "shell",
+    "web_search",
+    "web_fetch",
+    "knowledge"
+  ],
+  "allowedTools": [
+    "read",
+    "grep",
+    "glob",
+    "code",
+    "knowledge"
+  ],
+  "toolsSettings": {
+    "shell": {
+      "allowedCommands": [
+        "^git (log|show|grep|diff|status|ls-files|rev-list|blame)\\b.*",
+        "^bash agents/scripts/security/dep-audit\\.sh\\b.*"
+      ],
+      "autoAllowReadonly": true,
+      "denyByDefault": true
+    }
+  },
+  "resources": [
+    "file://senior_governance_compliance.md",
+    "file://senior_security_reviewer.md",
+    "file://../architects/senior_system_architect.md",
+    "file://../architects/senior_database_architect.md",
+    "file://../architects/senior_api_architect.md",
+    "file://../architects/senior_agentic_architect.md",
+    "file://../../prompts/system-architect.txt",
+    "file://../../README.md",
+    "skill://../skills/governance-*/SKILL.md",
+    "skill://../skills/security-compliance-and-audit/SKILL.md"
+  ],
+  "welcomeMessage": "Senior Governance & Compliance Architect ready. Tell me the frameworks/regulations in scope (SOC 2, ISO 27001, GDPR, HIPAA, PCI-DSS) and the system, and I'll scope it, map requirements to controls, build a data inventory, assess evidence and gaps, and deliver a prioritized Governance & Compliance Assessment with a risk register — flagging where legal/DPO/auditor input is required."
+}
